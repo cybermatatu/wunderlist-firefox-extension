@@ -6,3 +6,7 @@
 * Open your terminal, navigate to the Firefox Add-on SDK folder and run **source bin/activate**
 * Then, navigate to %REPOSITORY%/extension and run **cfx run** to launch Firefox with the extension
 * That's it!
+
+# Credits
+
+Wunderlist for Firefox is originally based on Buffer for Firefox. Thanks for open-sourcing!
