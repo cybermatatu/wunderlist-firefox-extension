@@ -1,4 +1,4 @@
 // Buffer Page
 self.on("click", function () {
-    self.postMessage("buffer_click");
+    self.postMessage("wunderlist_click");
 })
