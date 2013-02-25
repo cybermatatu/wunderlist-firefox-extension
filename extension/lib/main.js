@@ -28,7 +28,8 @@ config.plugin = {
         }
     },
     overlay: {
-        scripts: [
+
+        'scripts': [
 
             self.data.url('common/libs/jquery.min.js'),
 
@@ -38,7 +39,9 @@ config.plugin = {
             self.data.url('firefox/wunderlist-firefox-port-wrapper.js'),
             self.data.url('firefox/wunderlist-firefox-data-wrapper.js'),
             self.data.url('firefox/wunderlist-firefox.js')
-        ]
+        ],
+
+        'style': self.data.url('common/css/styles.css')
     }
 };
 
@@ -50,8 +53,12 @@ var attachOverlay = function (data, cb) {
     if( ! cb ) cb = function () {};
     if( ! data.embed ) data.embed = {};
 
+    alert(config.plugin.overlay.style);
+
     var worker = tabs.activeTab.attach({
-        contentScriptFile: config.plugin.overlay.scripts
+      'include': '*',
+      'contentStyleFile': config.plugin.overlay.style,
+      'contentScriptFile': config.plugin.overlay.scripts
     });
     
     worker.port.on('wunderlist_done', function (overlayData) {
