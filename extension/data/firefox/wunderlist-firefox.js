@@ -1,4 +1,4 @@
-;(function() {
+(function() {
 	self.port.on("wunderlist_click", function(postData) {
 		var temp = document.createElement('iframe');
 
