@@ -1,3 +1,6 @@
 [submodule "firefox/data/shared"]
 	path = firefox/data/shared
 	url = git@github.com:bufferapp/buffer-extension-shared.git
+[submodule "extension/data/common"]
+	path = extension/data/common
+	url = git@github.com:6wunderkinder/browser-extension-common.git

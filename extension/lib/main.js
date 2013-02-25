@@ -29,6 +29,12 @@ config.plugin = {
     },
     overlay: {
         scripts: [
+
+            self.data.url('common/libs/jquery.min.js'),
+
+            self.data.url('common/WL.js'),
+            self.data.url('common/Injectors.js'),
+
             self.data.url('firefox/wunderlist-firefox-port-wrapper.js'),
             self.data.url('firefox/wunderlist-firefox-data-wrapper.js'),
             self.data.url('firefox/wunderlist-firefox.js')
