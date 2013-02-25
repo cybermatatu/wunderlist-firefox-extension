@@ -53,12 +53,18 @@ var attachOverlay = function (data, cb) {
     if( ! cb ) cb = function () {};
     if( ! data.embed ) data.embed = {};
 
-    alert(config.plugin.overlay.style);
+    console.log(config.plugin.overlay.style);
 
     var worker = tabs.activeTab.attach({
-      'include': '*',
+
       'contentStyleFile': config.plugin.overlay.style,
       'contentScriptFile': config.plugin.overlay.scripts
+    });
+
+    var pageMod = require('page-mod').PageMod({
+
+      'include': "*",
+      'contentStyleFile': require('self').data.url('common/css/styles.css')
     });
     
     worker.port.on('wunderlist_done', function (overlayData) {
