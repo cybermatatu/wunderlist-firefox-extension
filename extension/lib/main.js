@@ -27,13 +27,13 @@ config.plugin = {
 
       'page': {
 
-        'label': "Remember This Page",
+        'label': "Add to Wunderlist",
         'scripts': [self.data.url('firefox/menu/wunderlist-page.js')]
       },
 
       'selection': {
 
-        'label': "Remember Selected Text"
+        'label': "Add to Wunderlist"
       }
     },
 
@@ -44,6 +44,7 @@ config.plugin = {
         self.data.url('common/libs/jquery.min.js'),
 
         self.data.url('common/WL.js'),
+        self.data.url('common/Overlay.js'),
         self.data.url('common/Injectors.js'),
 
         self.data.url('firefox/wunderlist-firefox.js')
@@ -57,6 +58,7 @@ config.plugin = {
         self.data.url('common/libs/jquery.min.js'),
 
         self.data.url('common/WL.js'),
+        self.data.url('common/Overlay.js'),
         self.data.url('common/Injectors.js'),
 
         self.data.url('firefox/wunderlist-firefox-port-wrapper.js'),
@@ -77,10 +79,25 @@ var pageMod = require('page-mod').PageMod({
 // Overlay
 var attachOverlay = function (data, cb) {
     
-    if( typeof data === 'function' ) cb = data;
-    if( ! data ) data = {};
-    if( ! cb ) cb = function () {};
-    if( ! data.embed ) data.embed = {};
+    if (typeof data === 'function') {
+
+      cb = data;
+    }
+
+    if (!data) {
+
+      data = {};
+    }
+
+    if (!cb) {
+
+      cb = function () {};
+    }
+
+    if (!data.embed) {
+      
+      data.embed = {};
+    }
 
     var worker = tabs.activeTab.attach({
 
