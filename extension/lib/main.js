@@ -45,6 +45,7 @@ config.plugin = {
 
         self.data.url('common/WL.js'),
         self.data.url('common/Overlay.js'),
+        self.data.url('common/Scrapers.js'),
         self.data.url('common/Injectors.js'),
 
         self.data.url('firefox/wunderlist-firefox.js')
@@ -59,6 +60,7 @@ config.plugin = {
 
         self.data.url('common/WL.js'),
         self.data.url('common/Overlay.js'),
+        self.data.url('common/Scrapers.js'),
         self.data.url('common/Injectors.js'),
 
         self.data.url('firefox/wunderlist-firefox-port-wrapper.js'),
