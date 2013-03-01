@@ -14,11 +14,11 @@ var mediator    = Cc['@mozilla.org/appshell/window-mediator;1'].getService(Ci.ns
 var config = {};
 config.plugin = {
 
-    'label': 'Remember This Page',
+    'label': 'Add to Wunderlist',
 
     'icon': {
 
-      'static': self.data.url('firefox/img/icon-small.png')
+      'static': self.data.url('common/icons/AddToWLPictogram16.png')
     },
 
     'version': self.version,
