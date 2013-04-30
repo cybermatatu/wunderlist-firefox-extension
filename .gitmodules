@@ -1,0 +1,3 @@
+[submodule "extension/data/common"]
+	path = extension/data/common
+	url = git@github.com:6wunderkinder/add-to-wunderlist-common.git
