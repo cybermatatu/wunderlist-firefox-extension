@@ -44,6 +44,7 @@ config.plugin = {
         self.data.url('common/libs/jquery.min.js'),
 
         self.data.url('common/WL.js'),
+        self.data.url('common/Storage.js'),
         self.data.url('common/Overlay.js'),
         self.data.url('common/Scrapers.js'),
         self.data.url('common/Injectors.js'),
@@ -59,6 +60,7 @@ config.plugin = {
         self.data.url('common/libs/jquery.min.js'),
 
         self.data.url('common/WL.js'),
+        self.data.url('common/Storage.js'),
         self.data.url('common/Overlay.js'),
         self.data.url('common/Scrapers.js'),
         self.data.url('common/Injectors.js'),
